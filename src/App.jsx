@@ -1,10 +1,11 @@
-// src/App.jsx
+// src/App.jsx - Updated with ScrollToTop
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 // Import layout components
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import ScrollToTop from './components/common/ScrollToTop';
 
 // Create a simple loader component for now
 const Loader = () => (
@@ -24,6 +25,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* Add ScrollToTop utility */}
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
