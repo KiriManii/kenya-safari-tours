@@ -1,4 +1,3 @@
-// src/pages/Contact.jsx
 import { useEffect } from 'react';
 
 const Contact = () => {

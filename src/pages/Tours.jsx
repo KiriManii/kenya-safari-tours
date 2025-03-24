@@ -1,4 +1,3 @@
-// src/pages/Tours.jsx
 import { useEffect } from 'react';
 
 const Tours = () => {

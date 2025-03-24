@@ -1,4 +1,3 @@
-// src/App.jsx - Updated with LoadingSpinner
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 

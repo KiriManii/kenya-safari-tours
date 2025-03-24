@@ -1,4 +1,3 @@
-// src/components/common/Button.jsx
 import { Link } from 'react-router-dom';
 
 const Button = ({ 

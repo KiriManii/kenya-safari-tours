@@ -1,4 +1,3 @@
-// src/pages/Gallery.jsx
 import { useEffect } from 'react';
 
 const Gallery = () => {

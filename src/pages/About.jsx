@@ -1,4 +1,3 @@
-// src/pages/About.jsx
 import { useEffect } from 'react';
 
 const About = () => {

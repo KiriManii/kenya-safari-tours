@@ -1,4 +1,3 @@
-// src/components/layout/Navbar.jsx - Enhanced version
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from '../common/Button';
