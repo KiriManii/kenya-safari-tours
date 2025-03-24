@@ -1,4 +1,4 @@
-// src/App.jsx - Updated with ScrollToTop
+// src/App.jsx - Updated with LoadingSpinner
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
@@ -6,13 +6,7 @@ import { lazy, Suspense } from 'react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
-
-// Create a simple loader component for now
-const Loader = () => (
-  <div className="flex items-center justify-center h-screen">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-safari-green"></div>
-  </div>
-);
+import LoadingSpinner from './components/common/LoadingSpinner';
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -25,11 +19,15 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* Add ScrollToTop utility */}
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={
+            <div className="flex justify-center items-center h-screen">
+              <LoadingSpinner size="large" />
+            </div>
+          }>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
